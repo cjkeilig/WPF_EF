@@ -22,27 +22,5 @@ namespace WpfBrowserApplication1.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\ProjectsV13;Initial Catalog=WPFTEST;Integrated Security=Tru" +
-            "e;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent" +
-            "=ReadWrite;MultiSubnetFailover=False")]
-        public string WPFTESTConnection {
-            get {
-                return ((string)(this["WPFTESTConnection"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\ProjectsV13;Initial Catalog=WPFTEST;Integrated Security=Tru" +
-            "e")]
-        public string WPFTESTConnectionString {
-            get {
-                return ((string)(this["WPFTESTConnectionString"]));
-            }
-        }
     }
 }

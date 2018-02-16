@@ -11,5 +11,10 @@ namespace WpfBrowserApplication1
     class PersonContext : DbContext
     {
         public DbSet<Person> Persons { get; set; }
+
+        public PersonContext() : base("WPFTest")
+        {
+
+        }
     }
 }

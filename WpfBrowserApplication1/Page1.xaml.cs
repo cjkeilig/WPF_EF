@@ -29,9 +29,15 @@ namespace WpfBrowserApplication1
                     ((System.Windows.Data.CollectionViewSource)(this.FindResource("personViewSource")));
 
 
-            _context.Persons.Load();
+            using (var _context = new PersonContext())
+            {
+                _context.Configuration.LazyLoadingEnabled = false;
+                _context.Configuration.ProxyCreationEnabled = false;
+                _context.Persons.Load();
+                personViewSource.Source = _context.Persons.Local;
 
-            personViewSource.Source = _context.Persons.Local;
+            }
+
 
 
         }

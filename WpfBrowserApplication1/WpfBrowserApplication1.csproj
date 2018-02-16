@@ -71,11 +71,6 @@
     </ApplicationDefinition>
     <Compile Include="PersonContext.cs" />
     <Compile Include="ViewModel\Person.cs" />
-    <Compile Include="WPFTESTDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WPFTESTDataSet.xsd</DependentUpon>
-    </Compile>
     <Page Include="Page1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -109,7 +104,6 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\WpfBrowserApplication1.ViewModel.Person.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,17 +111,6 @@
     <None Include="Properties\app.manifest" />
     <AppDesigner Include="Properties\" />
     <None Include="WpfBrowserApplication1_TemporaryKey.pfx" />
-    <None Include="WPFTESTDataSet.xsc">
-      <DependentUpon>WPFTESTDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="WPFTESTDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>WPFTESTDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="WPFTESTDataSet.xss">
-      <DependentUpon>WPFTESTDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

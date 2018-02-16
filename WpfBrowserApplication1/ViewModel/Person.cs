@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace WpfBrowserApplication1.ViewModel
 {
+    [Table("Person")]
     public class Person
     {
+        [Key]
+        private int _id;
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
         private string _firstName;
         public string FirstName
         {
@@ -38,6 +47,10 @@ namespace WpfBrowserApplication1.ViewModel
         {
             get
             {
+                if (_dob == null)
+                {
+                    return DateTime.Today;
+                }
                 return _dob;
             }
             set
@@ -46,11 +59,15 @@ namespace WpfBrowserApplication1.ViewModel
             }
         }
 
-        private DateTime _dod;
-        public DateTime Dod
+        private DateTime? _dod;
+        public DateTime? Dod
         {
             get
             {
+                if (_dod == null)
+                {
+                    return DateTime.Today;
+                }
                 return _dod;
             }
             set
